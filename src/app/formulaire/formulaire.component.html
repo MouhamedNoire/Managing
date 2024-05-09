@@ -1,0 +1,27 @@
+<div class="container flex flex-col mx-auto items-center justify-center bg-slate-200 max-w-screen-sm my-10 py-24 rounded-md shadow-xl">
+   <form #inscriptionForm="ngForm" (ngSubmit)="addForm(inscriptionForm)" >
+    <mat-card-header class=" text-gray-500 text-3xl font-bold animate-pulse">Formulaire d'inscription</mat-card-header>
+    <mat-divider class="w-full mb-6 py-10"></mat-divider>
+    <mat-card-content class="flex flex-col max-w-screen-sm items-center justify-center mx-auto">
+        <mat-form-field class="w-full mb-4">
+            <mat-label class="font-semibold">Prénom</mat-label>
+            <input matInput name="prenom" [(ngModel)]="prenom" class="w-full rounded-md border border-gray-400 py-2 px-4">
+        </mat-form-field>
+        <mat-form-field class="w-full mb-4">
+            <mat-label class="font-semibold">Nom</mat-label>
+            <input matInput name="nom" [(ngModel)]="nom" class="w-full rounded-md border border-gray-400 py-2 px-4">
+        </mat-form-field>
+        <mat-form-field class="w-full mb-4">
+            <mat-label class="font-semibold">Email</mat-label>
+            <input matInput name="email" [(ngModel)]="email" class="w-full rounded-md border border-gray-400 py-2 px-4">
+        </mat-form-field>
+        <mat-form-field class="w-full mb-4">
+            <mat-label class="font-semibold">Mot de passe</mat-label>
+            <input matInput type="password" name="password" [(ngModel)]="password" class="w-full rounded-md border border-gray-400 py-2 px-4">
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions class="flex justify-center" >
+        <button mat-raised-button type="submit" color="primary"  class="px-8 py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-md">Inscription</button>
+    </mat-card-actions>
+   </form>
+</div>

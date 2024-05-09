@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "nom": "Doe",
+      "prenom": "John",
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "created_at": "2024-05-10T08:00:00Z"
+    },
+    {
+      "id": "82",
+      "prenom": "amadou",
+      "nom": "Fall",
+      "email": "cheikhndiaye@gmail.com",
+      "password": "demme",
+      "created_at": "2024-05-06T19:33:30.116Z"
+    },
+    {
+      "id": "26",
+      "prenom": "Mouhamed Abdallah",
+      "nom": "Bathily",
+      "email": "panthererosa2@gmail.com",
+      "password": "Etienne",
+      "created_at": "2024-05-06T19:53:51.249Z"
+    },
+    {
+      "id": "23",
+      "prenom": "serigne ",
+      "nom": "Fall",
+      "email": "fallyaram@gmail.com",
+      "password": "passer123",
+      "created_at": "2024-05-06T20:12:12.059Z"
+    },
+    {
+      "id": 50,
+      "prenom": "test",
+      "nom": "yr",
+      "created_at": "2024-05-09T17:58:04.658Z"
+    },
+    {
+      "id": 70,
+      "prenom": "test",
+      "nom": "test",
+      "email": "test@gmail.com",
+      "password": "test",
+      "created_at": "2024-05-09T17:58:49.809Z"
+    }
+  ]
+}

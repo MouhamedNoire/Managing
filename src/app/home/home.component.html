@@ -1,0 +1,39 @@
+<mat-toolbar>
+    <div class="flex justify-center items-center"></div>
+    <button mat-icon-button (click)="menuside.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="flex-auto"></span>
+    <div class="flex space-x-10">
+        <button mat-button class="ml-3 font-bold">Home</button>
+        <button mat-button class="ml-3 font-bold">Shoes</button>
+        <button mat-button class="ml-3 font-bold">Shirt</button>
+        <button mat-button [matMenuTriggerFor]="profile" class="ml-3 font-bold"  color="accent">
+            <mat-icon iconPositionEnd >keyboard_arrow_down</mat-icon>
+            Profile
+        </button>
+        <mat-menu #profile>
+          <button mat-menu-item>Edit Profile</button>
+          <button mat-menu-item>Historic</button>
+        </mat-menu>
+        <button mat-raised-button color="warn" class="ml-3 font-bold">logout</button>
+    </div>
+</mat-toolbar>
+<mat-drawer-container>
+  <mat-drawer #menuside position="start" mode="side" opened="true" class="bg-green-500">
+    <mat-list>
+        <mat-list-item>
+          <button mat-button>
+            List-user
+            <mat-icon>dashboard</mat-icon>
+          </button>
+        </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="container min-h-screen min-w-full bg-slate-100">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>

@@ -1,18 +1,58 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatIconButton } from '@angular/material/button';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { MatButton} from '@angular/material/button';
+import { MatDividerModule} from '@angular/material/divider';
+import { HomeComponent } from './home/home.component'
+import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
+import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
+import {MatList, MatListItem} from "@angular/material/list";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormulaireComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatButton,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButton,
+    MatDividerModule,
+    HttpClientModule,
+    MatIconButton,
+    MatMenu,
+    MatMenuItem,
+    MatMenuTrigger,
+    MatList,
+    MatListItem,
+    MatInputModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
