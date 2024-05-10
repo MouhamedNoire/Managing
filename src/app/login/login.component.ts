@@ -30,11 +30,12 @@ export class LoginComponent implements  OnInit{
     })
   }
 
-  onSubmitForm() {
+  async onSubmitForm() {
     const { email, password } = this.loginForm.value;
     try {
-      const loggedInUser = this.authService.login(email, password);
-      console.log()
+      const loggedInUser :Utilisateur | null = await this.authService.login(email, password);
+
+      console.log(loggedInUser)
       if (loggedInUser) {
         console.log('User found:', loggedInUser);
         this.router.navigateByUrl('/home');
