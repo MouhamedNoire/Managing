@@ -1,19 +1,18 @@
-<div class="container flex flex-col max-w-screen-sm justify-center items-center mx-auto py-10 bg-amber-400">
-  <mat-card class="w-full">
+<div class="flex justify-center items-center h-screen bg-blue-400">
+  <mat-card class="w-full max-w-md">
     <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
+      <mat-card-title class="text-center">Login</mat-card-title>
     </mat-card-header>
     <mat-divider></mat-divider>
-    <mat-card-content class="flex flex-col justify-center items-center">
-      <form [formGroup]="loginForm" class="w-full">
+    <mat-card-content class="px-4 py-6">
+      <form [formGroup]="loginForm" class="space-y-4">
         <mat-form-field class="w-full">
           <input matInput placeholder="Login" formControlName="email">
         </mat-form-field>
         <mat-form-field class="w-full">
           <input matInput placeholder="Password" type="password" formControlName="password">
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="onSubmitForm()">Login
-        </button>
+        <button mat-raised-button color="primary" class="w-full" (click)="onSubmitForm()">Login</button>
       </form>
     </mat-card-content>
   </mat-card>

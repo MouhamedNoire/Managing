@@ -16,7 +16,8 @@
           <button mat-menu-item>Edit Profile</button>
           <button mat-menu-item>Historic</button>
         </mat-menu>
-        <button mat-raised-button color="warn" class="ml-3 font-bold">logout</button>
+        <button mat-button *ngIf="authService.isAuthenticated">{{authService.username}}</button>
+        <button mat-raised-button color="warn" class="ml-3 font-bold" (click)="logout()">logout</button>
     </div>
 </mat-toolbar>
 <mat-drawer-container>

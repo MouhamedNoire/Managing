@@ -20,6 +20,7 @@ import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
 import {MatList, MatListItem} from "@angular/material/list";
 import { LoginComponent } from './login/login.component';
+import {AuthGuard} from "./guards/auth.guard";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     HttpClientModule
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
