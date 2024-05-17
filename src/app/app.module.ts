@@ -15,19 +15,25 @@ import { MatIconButton } from '@angular/material/button';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatButton} from '@angular/material/button';
 import { MatDividerModule} from '@angular/material/divider';
+import{MatDialogModule} from "@angular/material/dialog";
 import { HomeComponent } from './home/home.component'
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
 import {MatList, MatListItem} from "@angular/material/list";
 import { LoginComponent } from './login/login.component';
 import {AuthGuard} from "./guards/auth.guard";
+import { ListUserComponent } from './list-user/list-user.component';
+import {MatTableModule} from "@angular/material/table";
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormulaireComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ListUserComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,9 @@ import {AuthGuard} from "./guards/auth.guard";
     MatList,
     MatListItem,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [provideAnimationsAsync(), AuthGuard],
   bootstrap: [AppComponent]

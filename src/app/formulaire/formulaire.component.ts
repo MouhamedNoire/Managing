@@ -22,7 +22,10 @@ export class FormulaireComponent {
   addForm(form: NgForm){
     this.formulaireService.addUser(form.value).subscribe(user=>{
       console.log('user added ', user)
-    })
+    },
+      (error)=>{
+        console.error('cant add user', error)
+      })
     this.router.navigateByUrl('home')
   }
 }

@@ -40,6 +40,7 @@ export class LoginComponent implements  OnInit{
         console.log('User found:', loggedInUser);
         this.router.navigateByUrl('/home');
       } else {
+        this.loginForm.reset();
         console.log('User not found');
       }
     } catch (error) {

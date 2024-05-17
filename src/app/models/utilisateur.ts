@@ -4,5 +4,4 @@ export interface Utilisateur{
     prenom:string;
     email:string;
     password:string;
-    created_at: Date;
 }
